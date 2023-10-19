@@ -1,0 +1,37 @@
+POST http://localhost:3001/items/create
+Content-Type: application/json
+
+{
+  "name": "Laptop Lenovo",
+  "category": "Laptop",
+  "price": 3000000,
+  "stock": 2,
+  "userid": 1
+}
+
+###
+PUT http://localhost:3001/items/update/2
+Content-Type: application/json
+
+{
+  "name": "Laptop Lenovo IdeaPad",
+  "category": "Laptop",
+  "price": 30000000,
+  "stock": 1,
+  "image": "https://via.placeholder.com/100",
+  "userid": 1
+}
+
+###
+GET http://localhost:3001/items
+Accept: application/json
+
+###
+GET http://localhost:3001/items/details/16
+Accept: application/json
+
+###
+DELETE http://localhost:3001/items/delete/1
+Accept: application/json
+
+###

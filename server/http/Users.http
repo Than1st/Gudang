@@ -1,0 +1,44 @@
+GET http://localhost:3001/users
+Accept: application/json
+
+###
+GET http://localhost:3001/users/details/1
+Accept: application/json
+
+###
+DELETE http://localhost:3001/users/delete/4
+Accept: application/json
+
+###
+POST http://localhost:3001/users/register
+Content-Type: application/json
+
+{
+  "username": "SulthanLR",
+  "email": "sulthanlr@gmail.com",
+  "password": "123",
+  "role": "admin"
+}
+
+###
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+  "email": "sulthanlr@gmail.com",
+  "password": "123"
+}
+
+###
+PUT http://localhost:3001/users/update/1
+Content-Type: application/json
+
+{
+  "username": "SulthanLR",
+  "email": "sulthanlr@gmail.com",
+  "password": "123",
+  "role": "admin"
+}
+
+###
+
