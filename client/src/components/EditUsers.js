@@ -22,7 +22,7 @@ export const EditUsers = () => {
     const getData = () => {
         axios({
             method: "GET",
-            url: "http://localhost:3001/users/details/" + param.id
+            url: "http://localhost:3002/users/details/" + param.id
         }).then((res) => {
             setData({
                 username: res.data.username,
@@ -58,7 +58,7 @@ export const EditUsers = () => {
                 }
                 const result = axios({
                     method: "PUT",
-                    url: "http://localhost:3001/users/update/" + param.id,
+                    url: "http://localhost:3002/users/update/" + param.id,
                     data: dataJson
                 }).then((res) => {
                     navigate('/users')

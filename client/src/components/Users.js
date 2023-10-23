@@ -10,7 +10,7 @@ export const Users = () => {
     const getUsers = () => {
         axios({
             method: "GET",
-            url: "http://localhost:3001/users"
+            url: "http://localhost:3002/users"
         }).then((res) => {
             setUsers(res.data)
         }).catch((e) => {
@@ -31,7 +31,7 @@ export const Users = () => {
                 if (result.isConfirmed) {
                     await axios({
                         method: "DELETE",
-                        url: `http://localhost:3001/users/delete/${id}`,
+                        url: `http://localhost:3002/users/delete/${id}`,
                     });
                     getUsers();
                     Swal.fire("Deleted!", "Users has been deleted.", "success");

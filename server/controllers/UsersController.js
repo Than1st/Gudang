@@ -43,6 +43,7 @@ class UsersController {
         try {
             const id = req.params.id
             const result = await Users.findByPk(id)
+            console.log(result)
             result ?
                 res.status(200).json(result) :
                 res.status(400).json({message: `Users ID ${id} not found.`})
@@ -51,7 +52,7 @@ class UsersController {
         }
     }
 
-    static async deleteUsers(req, res) {
+        static async deleteUsers(req, res) {
         try {
             const result = await Users.destroy({where: {id: req.params.id}})
             result === 1 ?

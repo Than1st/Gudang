@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
-import {useForm} from "react-hook-form";
+    import {useForm} from "react-hook-form";
 import Swal from "sweetalert2";
 
 export const EditItem = (props) => {
@@ -22,7 +22,7 @@ export const EditItem = (props) => {
     const getData = () => {
         axios({
             method: "GET",
-            url: "http://localhost:3001/items/details/" + param.id
+            url: "http://localhost:3002/items/details/" + param.id
         }).then((res) => {
             setData({
                 name: res.data.name,
@@ -59,7 +59,7 @@ export const EditItem = (props) => {
                 }
                 const result = axios({
                     method: "PUT",
-                    url: "http://localhost:3001/items/update/" + param.id,
+                    url: "http://localhost:3002/items/update/" + param.id,
                     data: dataJson
                 }).then((res) => {
                     navigate('/')

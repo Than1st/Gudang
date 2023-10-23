@@ -35,7 +35,7 @@ export const AddItem = () => {
                 console.log(dataJson)
                 const result = axios({
                     method: "POST",
-                    url: "http://localhost:3001/items/create",
+                    url: "http://localhost:3002/items/create",
                     data: dataJson
                 }).then((res) => {
                     navigate('/')

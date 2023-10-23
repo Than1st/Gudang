@@ -16,7 +16,7 @@ export const Login = ({setToken}) => {
     const loginUser = async () => {
         axios({
             method: "POST",
-            url: "http://localhost:3001/users/login",
+            url: "http://localhost:3002/users/login",
             data: {
                 email: email,
                 password: password,

@@ -11,7 +11,7 @@ export const Home = () => {
     const getItems = () => {
         axios({
             method: "GET",
-            url: "http://localhost:3001/items"
+            url: "http://localhost:3002/items"
         }).then((res) => {
             setItems(res.data)
         }).catch((e) => {
@@ -32,7 +32,7 @@ export const Home = () => {
                 if (result.isConfirmed) {
                     await axios({
                         method: "DELETE",
-                        url: `http://localhost:3001/items/delete/${id}`,
+                        url: `http://localhost:3002/items/delete/${id}`,
                     });
                     getItems();
                     Swal.fire("Deleted!", "Your Items has been deleted.", "success");

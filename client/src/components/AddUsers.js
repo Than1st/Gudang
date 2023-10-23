@@ -26,7 +26,7 @@ export const AddUsers = () => {
                 }
                 const result = axios({
                     method: "POST",
-                    url: "http://localhost:3001/users/register",
+                    url: "http://localhost:3002/users/register",
                     data: dataJson
                 }).then((res) => {
                     navigate('/users')
@@ -43,9 +43,8 @@ export const AddUsers = () => {
             <form onSubmit={handleSubmit(createHandler)}>
                 <div className="mb-3">
                     <label htmlFor="username" className="form-label">Username</label>
-                    <input {...register(
-                        'username'
-                    )} type="text" className="form-control" id="username" name='username'/>
+                    <input {...register('username')} type="text" className="form-control" id="username"
+                           name='username'/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email</label>
